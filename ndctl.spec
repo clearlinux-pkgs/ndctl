@@ -4,7 +4,7 @@
 #
 Name     : ndctl
 Version  : 47
-Release  : 4
+Release  : 5
 URL      : https://github.com/pmem/ndctl/archive/v47.tar.gz
 Source0  : https://github.com/pmem/ndctl/archive/v47.tar.gz
 Summary  : Device discovery and manipulation for the "nd" subsystem
