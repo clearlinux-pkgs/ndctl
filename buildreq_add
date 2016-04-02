@@ -4,3 +4,4 @@ kmod-dev
 asciidoc
 xmlto
 docbook-xml
+libxml2-dev
