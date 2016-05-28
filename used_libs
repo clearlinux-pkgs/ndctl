@@ -1,0 +1,5 @@
+libc.so.6
+libjson-c.so.2
+libkmod.so.2
+libudev.so.1
+libuuid.so.1

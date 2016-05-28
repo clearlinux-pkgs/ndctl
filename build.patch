@@ -1,0 +1,13 @@
+--- ndctl-53/autogen.sh.org	2016-05-28 20:43:47.140720149 +0000
++++ ndctl-53/autogen.sh	2016-05-28 20:43:54.635613561 +0000
+@@ -7,9 +7,7 @@
+ fi
+ 
+ $(dirname $0)/git-version-gen
+-reconf_args=''
+-[ -n "$*" ] && reconf_args="$*"
+-autoreconf --install --symlink $reconf_args
++autoreconf --install --symlink
+ 
+ libdir() {
+         echo $(cd $1/$(gcc -print-multi-os-directory); pwd)
