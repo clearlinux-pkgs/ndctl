@@ -37,6 +37,7 @@ libndctl.so.6:ndctl_btt_get_next
 libndctl.so.6:ndctl_btt_get_num_sector_sizes
 libndctl.so.6:ndctl_btt_get_region
 libndctl.so.6:ndctl_btt_get_sector_size
+libndctl.so.6:ndctl_btt_get_size
 libndctl.so.6:ndctl_btt_get_supported_sector_size
 libndctl.so.6:ndctl_btt_get_uuid
 libndctl.so.6:ndctl_btt_is_configured
@@ -144,6 +145,8 @@ libndctl.so.6:ndctl_dimm_get_formats
 libndctl.so.6:ndctl_dimm_get_handle
 libndctl.so.6:ndctl_dimm_get_id
 libndctl.so.6:ndctl_dimm_get_major
+libndctl.so.6:ndctl_dimm_get_manufacturing_date
+libndctl.so.6:ndctl_dimm_get_manufacturing_location
 libndctl.so.6:ndctl_dimm_get_minor
 libndctl.so.6:ndctl_dimm_get_next
 libndctl.so.6:ndctl_dimm_get_phys_id
