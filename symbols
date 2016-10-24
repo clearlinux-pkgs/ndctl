@@ -1,3 +1,4 @@
+libdaxctl.so.1:LIBDAXCTL_3
 libdaxctl.so.1:LIBNDCTL_1
 libdaxctl.so.1:LIBNDCTL_2
 libdaxctl.so.1:daxctl_dev_get_devname
@@ -13,7 +14,10 @@ libdaxctl.so.1:daxctl_get_userdata
 libdaxctl.so.1:daxctl_new
 libdaxctl.so.1:daxctl_new_region
 libdaxctl.so.1:daxctl_ref
+libdaxctl.so.1:daxctl_region_get_available_size
 libdaxctl.so.1:daxctl_region_get_ctx
+libdaxctl.so.1:daxctl_region_get_dev_seed
+libdaxctl.so.1:daxctl_region_get_devname
 libdaxctl.so.1:daxctl_region_get_id
 libdaxctl.so.1:daxctl_region_get_uuid
 libdaxctl.so.1:daxctl_region_ref
@@ -71,6 +75,7 @@ libndctl.so.6:ndctl_cmd_ars_get_record_len
 libndctl.so.6:ndctl_cmd_ars_in_progress
 libndctl.so.6:ndctl_cmd_ars_num_records
 libndctl.so.6:ndctl_cmd_cfg_read_get_data
+libndctl.so.6:ndctl_cmd_cfg_read_get_size
 libndctl.so.6:ndctl_cmd_cfg_size_get_size
 libndctl.so.6:ndctl_cmd_cfg_write_set_data
 libndctl.so.6:ndctl_cmd_cfg_write_zero_data
@@ -143,6 +148,7 @@ libndctl.so.6:ndctl_dimm_get_format
 libndctl.so.6:ndctl_dimm_get_formatN
 libndctl.so.6:ndctl_dimm_get_formats
 libndctl.so.6:ndctl_dimm_get_handle
+libndctl.so.6:ndctl_dimm_get_health_eventfd
 libndctl.so.6:ndctl_dimm_get_id
 libndctl.so.6:ndctl_dimm_get_major
 libndctl.so.6:ndctl_dimm_get_manufacturing_date
