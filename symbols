@@ -1,4 +1,7 @@
+libdaxctl.so.1:LIBDAXCTL_1
+libdaxctl.so.1:LIBDAXCTL_2
 libdaxctl.so.1:LIBDAXCTL_3
+libdaxctl.so.1:LIBDAXCTL_4
 libdaxctl.so.1:LIBNDCTL_1
 libdaxctl.so.1:LIBNDCTL_2
 libdaxctl.so.1:daxctl_dev_get_devname
@@ -14,11 +17,15 @@ libdaxctl.so.1:daxctl_get_userdata
 libdaxctl.so.1:daxctl_new
 libdaxctl.so.1:daxctl_new_region
 libdaxctl.so.1:daxctl_ref
+libdaxctl.so.1:daxctl_region_get_align
 libdaxctl.so.1:daxctl_region_get_available_size
 libdaxctl.so.1:daxctl_region_get_ctx
 libdaxctl.so.1:daxctl_region_get_dev_seed
 libdaxctl.so.1:daxctl_region_get_devname
+libdaxctl.so.1:daxctl_region_get_first
 libdaxctl.so.1:daxctl_region_get_id
+libdaxctl.so.1:daxctl_region_get_next
+libdaxctl.so.1:daxctl_region_get_size
 libdaxctl.so.1:daxctl_region_get_uuid
 libdaxctl.so.1:daxctl_region_ref
 libdaxctl.so.1:daxctl_region_unref
@@ -117,6 +124,7 @@ libndctl.so.6:ndctl_dax_get_region
 libndctl.so.6:ndctl_dax_get_resource
 libndctl.so.6:ndctl_dax_get_size
 libndctl.so.6:ndctl_dax_get_uuid
+libndctl.so.6:ndctl_dax_has_align
 libndctl.so.6:ndctl_dax_is_configured
 libndctl.so.6:ndctl_dax_is_enabled
 libndctl.so.6:ndctl_dax_is_valid
@@ -176,6 +184,7 @@ libndctl.so.6:ndctl_dimm_smart_pending
 libndctl.so.6:ndctl_dimm_zero_labels
 libndctl.so.6:ndctl_get_daxctl_ctx
 libndctl.so.6:ndctl_get_log_priority
+libndctl.so.6:ndctl_get_private_data
 libndctl.so.6:ndctl_get_userdata
 libndctl.so.6:ndctl_interleave_set_get_cookie
 libndctl.so.6:ndctl_interleave_set_get_first
@@ -246,6 +255,7 @@ libndctl.so.6:ndctl_pfn_get_region
 libndctl.so.6:ndctl_pfn_get_resource
 libndctl.so.6:ndctl_pfn_get_size
 libndctl.so.6:ndctl_pfn_get_uuid
+libndctl.so.6:ndctl_pfn_has_align
 libndctl.so.6:ndctl_pfn_is_configured
 libndctl.so.6:ndctl_pfn_is_enabled
 libndctl.so.6:ndctl_pfn_is_valid
@@ -284,6 +294,7 @@ libndctl.so.6:ndctl_region_is_enabled
 libndctl.so.6:ndctl_region_set_ro
 libndctl.so.6:ndctl_set_log_fn
 libndctl.so.6:ndctl_set_log_priority
+libndctl.so.6:ndctl_set_private_data
 libndctl.so.6:ndctl_set_userdata
 libndctl.so.6:ndctl_sizeof_namespace_index
 libndctl.so.6:ndctl_sizeof_namespace_label
