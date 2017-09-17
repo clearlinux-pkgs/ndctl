@@ -2,6 +2,7 @@ libdaxctl.so.1:LIBDAXCTL_1
 libdaxctl.so.1:LIBDAXCTL_2
 libdaxctl.so.1:LIBDAXCTL_3
 libdaxctl.so.1:LIBDAXCTL_4
+libdaxctl.so.1:LIBDAXCTL_5
 libdaxctl.so.1:daxctl_dev_get_devname
 libdaxctl.so.1:daxctl_dev_get_first
 libdaxctl.so.1:daxctl_dev_get_id
@@ -23,6 +24,7 @@ libdaxctl.so.1:daxctl_region_get_devname
 libdaxctl.so.1:daxctl_region_get_first
 libdaxctl.so.1:daxctl_region_get_id
 libdaxctl.so.1:daxctl_region_get_next
+libdaxctl.so.1:daxctl_region_get_path
 libdaxctl.so.1:daxctl_region_get_size
 libdaxctl.so.1:daxctl_region_get_uuid
 libdaxctl.so.1:daxctl_region_ref
@@ -32,6 +34,7 @@ libdaxctl.so.1:daxctl_set_log_priority
 libdaxctl.so.1:daxctl_set_userdata
 libdaxctl.so.1:daxctl_unref
 libndctl.so.6:LIBNDCTL_1
+libndctl.so.6:LIBNDCTL_13
 libndctl.so.6:LIBNDCTL_3
 libndctl.so.6:ndctl_btt_delete
 libndctl.so.6:ndctl_btt_enable
@@ -63,15 +66,18 @@ libndctl.so.6:ndctl_bus_get_by_provider
 libndctl.so.6:ndctl_bus_get_cmd_name
 libndctl.so.6:ndctl_bus_get_ctx
 libndctl.so.6:ndctl_bus_get_devname
+libndctl.so.6:ndctl_bus_get_dimm_by_physical_address
 libndctl.so.6:ndctl_bus_get_first
 libndctl.so.6:ndctl_bus_get_id
 libndctl.so.6:ndctl_bus_get_major
 libndctl.so.6:ndctl_bus_get_minor
 libndctl.so.6:ndctl_bus_get_next
 libndctl.so.6:ndctl_bus_get_provider
+libndctl.so.6:ndctl_bus_get_region_by_physical_address
 libndctl.so.6:ndctl_bus_get_revision
 libndctl.so.6:ndctl_bus_has_nfit
 libndctl.so.6:ndctl_bus_is_cmd_supported
+libndctl.so.6:ndctl_bus_is_nfit_cmd_supported
 libndctl.so.6:ndctl_bus_wait_probe
 libndctl.so.6:ndctl_cmd_ars_cap_get_range
 libndctl.so.6:ndctl_cmd_ars_cap_get_size
@@ -177,10 +183,14 @@ libndctl.so.6:ndctl_dimm_handle_get_node
 libndctl.so.6:ndctl_dimm_handle_get_socket
 libndctl.so.6:ndctl_dimm_has_errors
 libndctl.so.6:ndctl_dimm_has_notifications
+libndctl.so.6:ndctl_dimm_init_labels
 libndctl.so.6:ndctl_dimm_is_active
 libndctl.so.6:ndctl_dimm_is_cmd_supported
 libndctl.so.6:ndctl_dimm_is_enabled
+libndctl.so.6:ndctl_dimm_read_labels
+libndctl.so.6:ndctl_dimm_sizeof_namespace_label
 libndctl.so.6:ndctl_dimm_smart_pending
+libndctl.so.6:ndctl_dimm_validate_labels
 libndctl.so.6:ndctl_dimm_zero_labels
 libndctl.so.6:ndctl_get_daxctl_ctx
 libndctl.so.6:ndctl_get_log_priority
@@ -201,6 +211,7 @@ libndctl.so.6:ndctl_mapping_get_first
 libndctl.so.6:ndctl_mapping_get_length
 libndctl.so.6:ndctl_mapping_get_next
 libndctl.so.6:ndctl_mapping_get_offset
+libndctl.so.6:ndctl_mapping_get_position
 libndctl.so.6:ndctl_mapping_get_region
 libndctl.so.6:ndctl_min_namespace_size
 libndctl.so.6:ndctl_namespace_delete
@@ -215,6 +226,7 @@ libndctl.so.6:ndctl_namespace_get_bus
 libndctl.so.6:ndctl_namespace_get_ctx
 libndctl.so.6:ndctl_namespace_get_dax
 libndctl.so.6:ndctl_namespace_get_devname
+libndctl.so.6:ndctl_namespace_get_enforce_mode
 libndctl.so.6:ndctl_namespace_get_first
 libndctl.so.6:ndctl_namespace_get_id
 libndctl.so.6:ndctl_namespace_get_mode
@@ -236,6 +248,7 @@ libndctl.so.6:ndctl_namespace_is_configured
 libndctl.so.6:ndctl_namespace_is_enabled
 libndctl.so.6:ndctl_namespace_is_valid
 libndctl.so.6:ndctl_namespace_set_alt_name
+libndctl.so.6:ndctl_namespace_set_enforce_mode
 libndctl.so.6:ndctl_namespace_set_raw_mode
 libndctl.so.6:ndctl_namespace_set_sector_size
 libndctl.so.6:ndctl_namespace_set_size
