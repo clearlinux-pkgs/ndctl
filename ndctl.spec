@@ -4,7 +4,7 @@
 #
 Name     : ndctl
 Version  : 58.4
-Release  : 22
+Release  : 23
 URL      : https://github.com/pmem/ndctl/archive/v58.4.tar.gz
 Source0  : https://github.com/pmem/ndctl/archive/v58.4.tar.gz
 Summary  : Manage "libnvdimm" subsystem devices (Non-volatile Memory)
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1510887554
+export SOURCE_DATE_EPOCH=1517701455
 %autogen --disable-static --disable-docs
 make  %{?_smp_mflags}
 
@@ -91,7 +91,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1510887554
+export SOURCE_DATE_EPOCH=1517701455
 rm -rf %{buildroot}
 %make_install
 

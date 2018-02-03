@@ -1,5 +1,5 @@
 libc.so.6
-libjson-c.so.2
+libjson-c.so.3
 libkmod.so.2
 libudev.so.1
 libuuid.so.1
