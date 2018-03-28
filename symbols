@@ -136,6 +136,7 @@ libndctl.so.6:ndctl_cmd_smart_threshold_set_alarm_control
 libndctl.so.6:ndctl_cmd_smart_threshold_set_ctrl_temperature
 libndctl.so.6:ndctl_cmd_smart_threshold_set_media_temperature
 libndctl.so.6:ndctl_cmd_smart_threshold_set_spares
+libndctl.so.6:ndctl_cmd_smart_threshold_set_temperature
 libndctl.so.6:ndctl_cmd_submit
 libndctl.so.6:ndctl_cmd_unref
 libndctl.so.6:ndctl_cmd_vendor_get_output
