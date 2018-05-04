@@ -36,6 +36,7 @@ libdaxctl.so.1:daxctl_unref
 libndctl.so.6:LIBNDCTL_1
 libndctl.so.6:LIBNDCTL_13
 libndctl.so.6:LIBNDCTL_14
+libndctl.so.6:LIBNDCTL_15
 libndctl.so.6:LIBNDCTL_3
 libndctl.so.6:ndctl_bb_get_block
 libndctl.so.6:ndctl_bb_get_count
@@ -75,14 +76,17 @@ libndctl.so.6:ndctl_bus_get_id
 libndctl.so.6:ndctl_bus_get_major
 libndctl.so.6:ndctl_bus_get_minor
 libndctl.so.6:ndctl_bus_get_next
+libndctl.so.6:ndctl_bus_get_persistence_domain
 libndctl.so.6:ndctl_bus_get_provider
 libndctl.so.6:ndctl_bus_get_region_by_physical_address
 libndctl.so.6:ndctl_bus_get_revision
 libndctl.so.6:ndctl_bus_get_scrub_count
+libndctl.so.6:ndctl_bus_get_scrub_state
 libndctl.so.6:ndctl_bus_has_error_injection
 libndctl.so.6:ndctl_bus_has_nfit
 libndctl.so.6:ndctl_bus_is_cmd_supported
 libndctl.so.6:ndctl_bus_is_nfit_cmd_supported
+libndctl.so.6:ndctl_bus_start_scrub
 libndctl.so.6:ndctl_bus_wait_for_scrub_completion
 libndctl.so.6:ndctl_bus_wait_probe
 libndctl.so.6:ndctl_cmd_ars_cap_get_range
@@ -168,6 +172,7 @@ libndctl.so.6:ndctl_dax_set_namespace
 libndctl.so.6:ndctl_dax_set_uuid
 libndctl.so.6:ndctl_decode_smart_temperature
 libndctl.so.6:ndctl_dimm_aliased
+libndctl.so.6:ndctl_dimm_cmd_new_ack_shutdown_count
 libndctl.so.6:ndctl_dimm_cmd_new_cfg_read
 libndctl.so.6:ndctl_dimm_cmd_new_cfg_size
 libndctl.so.6:ndctl_dimm_cmd_new_cfg_write
@@ -189,6 +194,7 @@ libndctl.so.6:ndctl_dimm_failed_flush
 libndctl.so.6:ndctl_dimm_failed_map
 libndctl.so.6:ndctl_dimm_failed_restore
 libndctl.so.6:ndctl_dimm_failed_save
+libndctl.so.6:ndctl_dimm_fw_update_supported
 libndctl.so.6:ndctl_dimm_get_available_labels
 libndctl.so.6:ndctl_dimm_get_bus
 libndctl.so.6:ndctl_dimm_get_by_handle
@@ -260,7 +266,9 @@ libndctl.so.6:ndctl_namespace_delete
 libndctl.so.6:ndctl_namespace_disable
 libndctl.so.6:ndctl_namespace_disable_invalidate
 libndctl.so.6:ndctl_namespace_disable_safe
+libndctl.so.6:ndctl_namespace_disable_write_cache
 libndctl.so.6:ndctl_namespace_enable
+libndctl.so.6:ndctl_namespace_enable_write_cache
 libndctl.so.6:ndctl_namespace_get_alt_name
 libndctl.so.6:ndctl_namespace_get_block_device
 libndctl.so.6:ndctl_namespace_get_btt
@@ -300,6 +308,7 @@ libndctl.so.6:ndctl_namespace_set_sector_size
 libndctl.so.6:ndctl_namespace_set_size
 libndctl.so.6:ndctl_namespace_set_uuid
 libndctl.so.6:ndctl_namespace_uninject_error
+libndctl.so.6:ndctl_namespace_write_cache_is_enabled
 libndctl.so.6:ndctl_new
 libndctl.so.6:ndctl_pfn_delete
 libndctl.so.6:ndctl_pfn_enable
@@ -327,6 +336,7 @@ libndctl.so.6:ndctl_pfn_set_namespace
 libndctl.so.6:ndctl_pfn_set_uuid
 libndctl.so.6:ndctl_ref
 libndctl.so.6:ndctl_region_cleanup
+libndctl.so.6:ndctl_region_deep_flush
 libndctl.so.6:ndctl_region_disable_invalidate
 libndctl.so.6:ndctl_region_disable_preserve
 libndctl.so.6:ndctl_region_enable
@@ -348,6 +358,8 @@ libndctl.so.6:ndctl_region_get_next
 libndctl.so.6:ndctl_region_get_next_badblock
 libndctl.so.6:ndctl_region_get_next_dimm
 libndctl.so.6:ndctl_region_get_nstype
+libndctl.so.6:ndctl_region_get_numa_node
+libndctl.so.6:ndctl_region_get_persistence_domain
 libndctl.so.6:ndctl_region_get_pfn_seed
 libndctl.so.6:ndctl_region_get_range_index
 libndctl.so.6:ndctl_region_get_resource
