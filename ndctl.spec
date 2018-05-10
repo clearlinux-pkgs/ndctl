@@ -4,7 +4,7 @@
 #
 Name     : ndctl
 Version  : 60.1
-Release  : 30
+Release  : 31
 URL      : https://github.com/pmem/ndctl/archive/v60.1.tar.gz
 Source0  : https://github.com/pmem/ndctl/archive/v60.1.tar.gz
 Summary  : Manage "libnvdimm" subsystem devices (Non-volatile Memory)
