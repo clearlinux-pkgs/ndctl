@@ -38,6 +38,7 @@ libndctl.so.6:LIBNDCTL_13
 libndctl.so.6:LIBNDCTL_14
 libndctl.so.6:LIBNDCTL_15
 libndctl.so.6:LIBNDCTL_16
+libndctl.so.6:LIBNDCTL_17
 libndctl.so.6:LIBNDCTL_3
 libndctl.so.6:ndctl_bb_get_block
 libndctl.so.6:ndctl_bb_get_count
@@ -129,6 +130,7 @@ libndctl.so.6:ndctl_cmd_smart_get_spares
 libndctl.so.6:ndctl_cmd_smart_get_temperature
 libndctl.so.6:ndctl_cmd_smart_get_vendor_data
 libndctl.so.6:ndctl_cmd_smart_get_vendor_size
+libndctl.so.6:ndctl_cmd_smart_inject_ctrl_temperature
 libndctl.so.6:ndctl_cmd_smart_inject_fatal
 libndctl.so.6:ndctl_cmd_smart_inject_media_temperature
 libndctl.so.6:ndctl_cmd_smart_inject_spares
@@ -205,11 +207,14 @@ libndctl.so.6:ndctl_dimm_get_cmd_name
 libndctl.so.6:ndctl_dimm_get_ctx
 libndctl.so.6:ndctl_dimm_get_device
 libndctl.so.6:ndctl_dimm_get_devname
+libndctl.so.6:ndctl_dimm_get_event_flags
 libndctl.so.6:ndctl_dimm_get_first
+libndctl.so.6:ndctl_dimm_get_flags
 libndctl.so.6:ndctl_dimm_get_format
 libndctl.so.6:ndctl_dimm_get_formatN
 libndctl.so.6:ndctl_dimm_get_formats
 libndctl.so.6:ndctl_dimm_get_handle
+libndctl.so.6:ndctl_dimm_get_health
 libndctl.so.6:ndctl_dimm_get_health_eventfd
 libndctl.so.6:ndctl_dimm_get_id
 libndctl.so.6:ndctl_dimm_get_major
@@ -236,9 +241,11 @@ libndctl.so.6:ndctl_dimm_init_labels
 libndctl.so.6:ndctl_dimm_is_active
 libndctl.so.6:ndctl_dimm_is_cmd_supported
 libndctl.so.6:ndctl_dimm_is_enabled
+libndctl.so.6:ndctl_dimm_is_flag_supported
 libndctl.so.6:ndctl_dimm_locked
 libndctl.so.6:ndctl_dimm_read_labels
 libndctl.so.6:ndctl_dimm_sizeof_namespace_label
+libndctl.so.6:ndctl_dimm_smart_inject_supported
 libndctl.so.6:ndctl_dimm_smart_pending
 libndctl.so.6:ndctl_dimm_validate_labels
 libndctl.so.6:ndctl_dimm_zero_labels
@@ -358,6 +365,7 @@ libndctl.so.6:ndctl_region_get_id
 libndctl.so.6:ndctl_region_get_interleave_set
 libndctl.so.6:ndctl_region_get_interleave_ways
 libndctl.so.6:ndctl_region_get_mappings
+libndctl.so.6:ndctl_region_get_max_available_extent
 libndctl.so.6:ndctl_region_get_namespace_seed
 libndctl.so.6:ndctl_region_get_next
 libndctl.so.6:ndctl_region_get_next_badblock
