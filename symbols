@@ -39,6 +39,7 @@ libndctl.so.6:LIBNDCTL_14
 libndctl.so.6:LIBNDCTL_15
 libndctl.so.6:LIBNDCTL_16
 libndctl.so.6:LIBNDCTL_17
+libndctl.so.6:LIBNDCTL_18
 libndctl.so.6:LIBNDCTL_3
 libndctl.so.6:ndctl_bb_get_block
 libndctl.so.6:ndctl_bb_get_count
@@ -207,6 +208,7 @@ libndctl.so.6:ndctl_dimm_get_cmd_name
 libndctl.so.6:ndctl_dimm_get_ctx
 libndctl.so.6:ndctl_dimm_get_device
 libndctl.so.6:ndctl_dimm_get_devname
+libndctl.so.6:ndctl_dimm_get_dirty_shutdown
 libndctl.so.6:ndctl_dimm_get_event_flags
 libndctl.so.6:ndctl_dimm_get_first
 libndctl.so.6:ndctl_dimm_get_flags
@@ -288,9 +290,11 @@ libndctl.so.6:ndctl_namespace_get_dax
 libndctl.so.6:ndctl_namespace_get_devname
 libndctl.so.6:ndctl_namespace_get_enforce_mode
 libndctl.so.6:ndctl_namespace_get_first
+libndctl.so.6:ndctl_namespace_get_first_badblock
 libndctl.so.6:ndctl_namespace_get_id
 libndctl.so.6:ndctl_namespace_get_mode
 libndctl.so.6:ndctl_namespace_get_next
+libndctl.so.6:ndctl_namespace_get_next_badblock
 libndctl.so.6:ndctl_namespace_get_num_sector_sizes
 libndctl.so.6:ndctl_namespace_get_numa_node
 libndctl.so.6:ndctl_namespace_get_pfn
