@@ -41,6 +41,7 @@ libndctl.so.6:LIBNDCTL_16
 libndctl.so.6:LIBNDCTL_17
 libndctl.so.6:LIBNDCTL_18
 libndctl.so.6:LIBNDCTL_19
+libndctl.so.6:LIBNDCTL_20
 libndctl.so.6:LIBNDCTL_3
 libndctl.so.6:ndctl_bb_get_block
 libndctl.so.6:ndctl_bb_get_count
@@ -90,6 +91,7 @@ libndctl.so.6:ndctl_bus_has_error_injection
 libndctl.so.6:ndctl_bus_has_nfit
 libndctl.so.6:ndctl_bus_is_cmd_supported
 libndctl.so.6:ndctl_bus_is_nfit_cmd_supported
+libndctl.so.6:ndctl_bus_poll_scrub_completion
 libndctl.so.6:ndctl_bus_start_scrub
 libndctl.so.6:ndctl_bus_wait_for_scrub_completion
 libndctl.so.6:ndctl_bus_wait_probe
