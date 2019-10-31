@@ -1,5 +1,5 @@
 PKG_NAME := ndctl
-URL = https://github.com/pmem/ndctl/archive/v65/ndctl-65.tar.gz
+URL = https://github.com/pmem/ndctl/archive/v67/ndctl-67.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
