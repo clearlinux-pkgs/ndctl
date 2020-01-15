@@ -4,16 +4,17 @@
 #
 Name     : ndctl
 Version  : 67
-Release  : 41
+Release  : 42
 URL      : https://github.com/pmem/ndctl/archive/v67/ndctl-67.tar.gz
 Source0  : https://github.com/pmem/ndctl/archive/v67/ndctl-67.tar.gz
-Summary  : Utility library for managing the libnvdimm (non-volatile memory device) sub-system in the Linux kernel
+Summary  : Manage "libnvdimm" subsystem devices (Non-volatile Memory)
 Group    : Development/Tools
 License  : CC0-1.0 GPL-2.0 LGPL-2.1 MIT
 Requires: ndctl-bin = %{version}-%{release}
 Requires: ndctl-data = %{version}-%{release}
 Requires: ndctl-lib = %{version}-%{release}
 Requires: ndctl-license = %{version}-%{release}
+Requires: ndctl-man = %{version}-%{release}
 Requires: ndctl-services = %{version}-%{release}
 BuildRequires : asciidoc
 BuildRequires : docbook-xml
@@ -62,7 +63,6 @@ Requires: ndctl-bin = %{version}-%{release}
 Requires: ndctl-data = %{version}-%{release}
 Provides: ndctl-devel = %{version}-%{release}
 Requires: ndctl = %{version}-%{release}
-Requires: ndctl = %{version}-%{release}
 
 %description dev
 dev components for the ndctl package.
@@ -86,6 +86,14 @@ Group: Default
 license components for the ndctl package.
 
 
+%package man
+Summary: man components for the ndctl package.
+Group: Default
+
+%description man
+man components for the ndctl package.
+
+
 %package services
 Summary: services components for the ndctl package.
 Group: Systemd services
@@ -96,6 +104,7 @@ services components for the ndctl package.
 
 %prep
 %setup -q -n ndctl-67
+cd %{_builddir}/ndctl-67
 %patch1 -p1
 
 %build
@@ -103,8 +112,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572544876
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1579114010
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -113,7 +121,7 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
-%autogen --disable-static --disable-docs
+%autogen --disable-static --disable-asciidoctor
 make  %{?_smp_mflags}
 
 %check
@@ -124,7 +132,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1572544876
+export SOURCE_DATE_EPOCH=1579114010
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/ndctl
 cp %{_builddir}/ndctl-67/COPYING %{buildroot}/usr/share/package-licenses/ndctl/5885edf2f275ae8fdcbbc22191d87064fbfa2516
@@ -181,6 +189,45 @@ cp %{_builddir}/ndctl-67/util/COPYING %{buildroot}/usr/share/package-licenses/nd
 /usr/share/package-licenses/ndctl/5885edf2f275ae8fdcbbc22191d87064fbfa2516
 /usr/share/package-licenses/ndctl/b47456e2c1f38c40346ff00db976a2badf36b5e3
 /usr/share/package-licenses/ndctl/cac5aabfbd6b7df58097e0f2efc0021152a31247
+
+%files man
+%defattr(0644,root,root,0755)
+/usr/share/man/man1/daxctl-list.1
+/usr/share/man/man1/daxctl-migrate-device-model.1
+/usr/share/man/man1/daxctl-offline-memory.1
+/usr/share/man/man1/daxctl-online-memory.1
+/usr/share/man/man1/daxctl-reconfigure-device.1
+/usr/share/man/man1/daxctl.1
+/usr/share/man/man1/ndctl-check-labels.1
+/usr/share/man/man1/ndctl-check-namespace.1
+/usr/share/man/man1/ndctl-clear-errors.1
+/usr/share/man/man1/ndctl-create-namespace.1
+/usr/share/man/man1/ndctl-destroy-namespace.1
+/usr/share/man/man1/ndctl-disable-dimm.1
+/usr/share/man/man1/ndctl-disable-namespace.1
+/usr/share/man/man1/ndctl-disable-region.1
+/usr/share/man/man1/ndctl-enable-dimm.1
+/usr/share/man/man1/ndctl-enable-namespace.1
+/usr/share/man/man1/ndctl-enable-region.1
+/usr/share/man/man1/ndctl-freeze-security.1
+/usr/share/man/man1/ndctl-init-labels.1
+/usr/share/man/man1/ndctl-inject-error.1
+/usr/share/man/man1/ndctl-inject-smart.1
+/usr/share/man/man1/ndctl-list.1
+/usr/share/man/man1/ndctl-load-keys.1
+/usr/share/man/man1/ndctl-monitor.1
+/usr/share/man/man1/ndctl-read-labels.1
+/usr/share/man/man1/ndctl-remove-passphrase.1
+/usr/share/man/man1/ndctl-sanitize-dimm.1
+/usr/share/man/man1/ndctl-setup-passphrase.1
+/usr/share/man/man1/ndctl-start-scrub.1
+/usr/share/man/man1/ndctl-update-firmware.1
+/usr/share/man/man1/ndctl-update-passphrase.1
+/usr/share/man/man1/ndctl-wait-overwrite.1
+/usr/share/man/man1/ndctl-wait-scrub.1
+/usr/share/man/man1/ndctl-write-labels.1
+/usr/share/man/man1/ndctl-zero-labels.1
+/usr/share/man/man1/ndctl.1
 
 %files services
 %defattr(-,root,root,-)
