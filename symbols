@@ -5,9 +5,11 @@ libdaxctl.so.1:LIBDAXCTL_4
 libdaxctl.so.1:LIBDAXCTL_5
 libdaxctl.so.1:LIBDAXCTL_6
 libdaxctl.so.1:LIBDAXCTL_7
+libdaxctl.so.1:LIBDAXCTL_8
 libdaxctl.so.1:daxctl_dev_disable
 libdaxctl.so.1:daxctl_dev_enable_devdax
 libdaxctl.so.1:daxctl_dev_enable_ram
+libdaxctl.so.1:daxctl_dev_get_align
 libdaxctl.so.1:daxctl_dev_get_ctx
 libdaxctl.so.1:daxctl_dev_get_devname
 libdaxctl.so.1:daxctl_dev_get_first
@@ -21,8 +23,17 @@ libdaxctl.so.1:daxctl_dev_get_resource
 libdaxctl.so.1:daxctl_dev_get_size
 libdaxctl.so.1:daxctl_dev_get_target_node
 libdaxctl.so.1:daxctl_dev_is_enabled
+libdaxctl.so.1:daxctl_dev_set_align
+libdaxctl.so.1:daxctl_dev_set_mapping
+libdaxctl.so.1:daxctl_dev_set_size
 libdaxctl.so.1:daxctl_get_log_priority
 libdaxctl.so.1:daxctl_get_userdata
+libdaxctl.so.1:daxctl_mapping_get_end
+libdaxctl.so.1:daxctl_mapping_get_first
+libdaxctl.so.1:daxctl_mapping_get_next
+libdaxctl.so.1:daxctl_mapping_get_offset
+libdaxctl.so.1:daxctl_mapping_get_size
+libdaxctl.so.1:daxctl_mapping_get_start
 libdaxctl.so.1:daxctl_memory_get_block_size
 libdaxctl.so.1:daxctl_memory_get_dev
 libdaxctl.so.1:daxctl_memory_get_node_path
@@ -35,6 +46,8 @@ libdaxctl.so.1:daxctl_memory_online_no_movable
 libdaxctl.so.1:daxctl_new
 libdaxctl.so.1:daxctl_new_region
 libdaxctl.so.1:daxctl_ref
+libdaxctl.so.1:daxctl_region_create_dev
+libdaxctl.so.1:daxctl_region_destroy_dev
 libdaxctl.so.1:daxctl_region_get_align
 libdaxctl.so.1:daxctl_region_get_available_size
 libdaxctl.so.1:daxctl_region_get_ctx
@@ -65,6 +78,7 @@ libndctl.so.6:LIBNDCTL_21
 libndctl.so.6:LIBNDCTL_22
 libndctl.so.6:LIBNDCTL_23
 libndctl.so.6:LIBNDCTL_24
+libndctl.so.6:LIBNDCTL_25
 libndctl.so.6:LIBNDCTL_3
 libndctl.so.6:ndctl_bb_get_block
 libndctl.so.6:ndctl_bb_get_count
@@ -90,6 +104,9 @@ libndctl.so.6:ndctl_btt_is_valid
 libndctl.so.6:ndctl_btt_set_namespace
 libndctl.so.6:ndctl_btt_set_sector_size
 libndctl.so.6:ndctl_btt_set_uuid
+libndctl.so.6:ndctl_bus_activate_firmware
+libndctl.so.6:ndctl_bus_clear_fw_activate_noidle
+libndctl.so.6:ndctl_bus_clear_fw_activate_nosuspend
 libndctl.so.6:ndctl_bus_cmd_new_ars_cap
 libndctl.so.6:ndctl_bus_cmd_new_ars_start
 libndctl.so.6:ndctl_bus_cmd_new_ars_status
@@ -100,6 +117,8 @@ libndctl.so.6:ndctl_bus_get_ctx
 libndctl.so.6:ndctl_bus_get_devname
 libndctl.so.6:ndctl_bus_get_dimm_by_physical_address
 libndctl.so.6:ndctl_bus_get_first
+libndctl.so.6:ndctl_bus_get_fw_activate_method
+libndctl.so.6:ndctl_bus_get_fw_activate_state
 libndctl.so.6:ndctl_bus_get_id
 libndctl.so.6:ndctl_bus_get_major
 libndctl.so.6:ndctl_bus_get_minor
@@ -117,6 +136,8 @@ libndctl.so.6:ndctl_bus_is_cmd_supported
 libndctl.so.6:ndctl_bus_is_nfit_cmd_supported
 libndctl.so.6:ndctl_bus_is_papr_scm
 libndctl.so.6:ndctl_bus_poll_scrub_completion
+libndctl.so.6:ndctl_bus_set_fw_activate_noidle
+libndctl.so.6:ndctl_bus_set_fw_activate_nosuspend
 libndctl.so.6:ndctl_bus_start_scrub
 libndctl.so.6:ndctl_bus_wait_for_scrub_completion
 libndctl.so.6:ndctl_bus_wait_probe
@@ -236,6 +257,8 @@ libndctl.so.6:ndctl_dimm_failed_map
 libndctl.so.6:ndctl_dimm_failed_restore
 libndctl.so.6:ndctl_dimm_failed_save
 libndctl.so.6:ndctl_dimm_freeze_security
+libndctl.so.6:ndctl_dimm_fw_activate_arm
+libndctl.so.6:ndctl_dimm_fw_activate_disarm
 libndctl.so.6:ndctl_dimm_fw_update_supported
 libndctl.so.6:ndctl_dimm_get_available_labels
 libndctl.so.6:ndctl_dimm_get_bus
@@ -251,6 +274,8 @@ libndctl.so.6:ndctl_dimm_get_flags
 libndctl.so.6:ndctl_dimm_get_format
 libndctl.so.6:ndctl_dimm_get_formatN
 libndctl.so.6:ndctl_dimm_get_formats
+libndctl.so.6:ndctl_dimm_get_fw_activate_result
+libndctl.so.6:ndctl_dimm_get_fw_activate_state
 libndctl.so.6:ndctl_dimm_get_handle
 libndctl.so.6:ndctl_dimm_get_health
 libndctl.so.6:ndctl_dimm_get_health_eventfd
